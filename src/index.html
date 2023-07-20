@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>to-do</title>
+</head>
+
+<body class="bg-light">
+    <main class="container-fluid d-flex flex-column align-items-center">
+        <h1 class="m-auto">To-do</h1>
+        <p class="col-8 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae sunt soluta ducimus
+            accusantium in
+            laboriosam asperiores tempora placeat nobis nihil, dolore nemo enim recusandae laudantium ullam non eius?
+            Ullam, impedit!</p>
+        <div class="col-7 bg-primary border rounded">
+            <div
+                class=" container-fluid input-group d-flex flex-row justify-content-around align-items-center text-white">
+
+                <div class=" col-4 d-flex flex-column justify-content-center ">
+                    <label for="" class="fs-5 fw-bolder">Task</label>
+                    <input type="text" placeholder="Task" name="" class="form-control fw-semibold fs-5 " id="task">
+                </div>
+
+                <div class="col-3 d-flex flex-column justify-content-center">
+                    <label for="priority" class="fs-5 fw-bolder">Priority</label>
+                    <select name="" class="col-8 border-0 fs-5 fw-semibold border rounded" id="priority">
+                        <option value="high" class="bg-danger border rounded">High</option>
+                        <option value="medium" class="bg-warning border rounded">Medium</option>
+                        <option value="low" class="bg-success border rounded">Low</option>
+                    </select>
+                </div>
+
+                <div class="d-flex flex-column justify-content-center">
+                    <label for="addButton" class="fs-5 fw-bolder">Add task</label>
+                    <button type="button" onclick="addTask()" class="btn btn-light btn-md fs-5 fw-semibold"
+                        id="addButton">ADD</button>
+                </div>
+
+            </div>
+            <br>
+
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-warning col-10 m-auto d-flex flex-row justify-content-between"
+                    id="task-0">
+                    <div class="col-6"><p class="text-break fs-3 fw-semibold ">Homework!</p></div>
+                    <div class="col-3"><button class="btn btn-success" id="done-0"onclick="markAsDone(this.id)">Done</button><button class="btn btn-danger" onclick="deleteTask(this.id)" id="delete-0">Delete</button></div>
+                </li>
+            </ul>
+            <br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+    </main>
+    <script src="index.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
